@@ -29,12 +29,25 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+<!--
+React is a component library in JS used to build out user interfaces. React simplifies the process of creating dynamic interfaces by storing variable application data in "state" and rendering modular components to the DOM based on that state. Additionally, because React utilizes an intermediary "virtual" DOM to track changes, called reconciliation, manipulation of the actual DOM is only triggered when and for components that have changed. Finally, React allows integration of HTML markup direclty inside of Javascript using JSX which eliminates the need of manually constructing and structuring HTML elements using traditional methods such as createElement and appendChild.
+-->
 
 1. Describe component state.
+<!--
+State is data that is stored and managed by a React component. State is initialized in a component using the useState() method, and updated with setState(). Changes to state through setState trigger React to re-rendere the components that need updating.
+-->
+
 
 1. Describe props.
+<!--
+Props (properties) is data that is passed to a React component from its parent component. Props are passed into a component at the invocation of the component function: <App props={data}/>. Props data is always passed from parent to child and never vice versa. Props can come from state or any other standard data type: strings, booleans, numbers, object literals, variables, etc.
+-->
 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+<!--
+Side effects are secondary logic that occur after the initial (or scheduled) render of a React component. Side effects only run if there is a state change that requires React to re-render the DOM. Side effects can be set to only run after a particular state change by specifying an argument on the side effect handler with the desired effect to be watched. Side effects come in two types: those that require clean up and those that do not require clean up. Components in React that do not have side effects are called pure components; they only render the same output for the same state and props.
+-->
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 

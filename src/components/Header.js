@@ -19,22 +19,15 @@ const StyledHeader = styled.div`
 //Header Component
 export default function Header(props) {
     const { searchTerm, setSearchTerm } = props
-    const [inputValue, setInputValue] = useState('')
 
     const onChange = (event) => {
         setSearchTerm(event.target.value)
     }
 
-    const onSubmit = (event) => {
-        event.preventDefault()
-        setSearchTerm(inputValue)
-        setInputValue('')
-    }
-
     return (
         <StyledHeader>
              <h1>Rick & Morty Characters</h1>
-             <form onSubmit={onSubmit}>
+             <form>
                 <input
                     type="text"
                     placeholder='Search'
