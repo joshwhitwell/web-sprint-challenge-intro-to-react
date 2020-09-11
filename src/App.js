@@ -38,17 +38,17 @@ const App = () => {
   //Set Filtered Characters
   useEffect(() => {
     setFiltered(allCharacters.filter(character => {
-      return character.name === searchTerm || character.species === searchTerm
+      return character.name.includes(searchTerm)
       }))
   }, [searchTerm, allCharacters])
 
   //Return App
   return (
       <StyledApp>
-      <Header />
+      <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
       <div>
       {
-        allCharacters.map(character => 
+        filtered.map(character => 
           <Character characterInfo={character} key={character.id}/>
         )
       }
